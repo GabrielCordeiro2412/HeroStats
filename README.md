@@ -1,6 +1,6 @@
 # HeroStats
 
-<img src="./assets/icon.png" width="100px" height="100"/>
+<img src="./assets/cover.png" width="100px" height="100" align="center"/>
 
 O HeroStats é um projeto para meu futuro website portifolio.
 O aplicativo tem o intúito de mostrar as estatisticas de todos os superóis existentes nos úniversos cinematográficos.
