@@ -10,7 +10,28 @@
  
 # Desenvolvido com
  <ul>
-  <li><a href="https://reactnative.dev/">React Native</a></li>
-  <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript">JavaScipt</a></li>
-  <li><a href="https://docs.expo.dev/">Expo</a></li>
+  <li><img align="center" alt="Gabriel-React" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"><a href="https://reactnative.dev/">React Native</a></li>
  </ul>
+ 
+# Rodando o projeto localmente
+
+<p>Segue abaixo um pequeno tutorial de como rodar o projeto na sua máquina:</p>
+
+<p>1 - Se você já possui o Expo instalado em sua maquina, pode pular para o passo 2, caso não tenha, rode o seguinte comando no seu terminal:</p>
+<code>npm install --global expo-cli</code>
+<hr>
+
+<p>2 - Clone o repositório: </p>
+<code>git clone https://github.com/GabrielCordeiro2412/HeroStats.git</code><br>
+<hr>
+
+<p>3 - Em seguida instale as dependências do projeto: </p>
+<code>yarn install</code><br/> ou
+<code>npm install</code><br>
+<hr>
+
+<p>4 - Depois de ter instalado as dependências, você já pode rodar o projeto localmente:</p>
+<code>yarn dev</code>
+ 
+ 
+  
