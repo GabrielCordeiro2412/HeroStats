@@ -1,5 +1,5 @@
 # HeroStats
-<p>O <strong>HeroStats</strong> tem o intúito de mostrar as estatisticas de todos os superóis existentes nos úniversos cinematográficos.</p> 
+<p>O <strong>HeroStats</strong> tem o intuito de mostrar as estatísticas de todos os super-heróis existentes nos universos cinematográficos.</p> 
 <img src="./assets/cover.png" align="center"/>
 
 # API do HeroStats
