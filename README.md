@@ -3,8 +3,8 @@
 <img src="./assets/cover.png" align="center"/>
 
 # API do HeroStats
-<p>Foi utilizada uma API pública para a concretização do projeto, segue o link abaixo:</p>
- - https://superheroapi.com/index.html
+<p>Foi utilizada uma API pública para a concretização do projeto, segue o link abaixo ou <a href="https://superheroapi.com/index.html">clicando aqui</a>:</p>
+ https://superheroapi.com/index.html
  
  <p>Você também pode fazer o <a href="https://expo.io/artifacts/058d38c2-5585-45e7-ad13-ebc34752aac0">download do HeroStats!</a></p>
  
