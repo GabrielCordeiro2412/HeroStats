@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import { View, Text, TextInput, TouchableOpacity, FlatList, Image, StyleSheet, ActivityIndicator, Alert } from 'react-native'
-import api from '../services/api'
 import HeroCard from '../components/HeroCard'
 
 export default function Home() {
