@@ -8,38 +8,42 @@ export default function Home() {
     const [search, setSearch] = useState();
     const [heroName, setHeroName] = useState();
     const [loading, setLoading] = useState(true);
+    const [pesquisa, setPesquisa] = useState(false);
 
     
-         useEffect(() => {
-            function check(){
-                if(!search){
-                    fetch('https://superheroapi.com/api/2308834499252431/search/a',{
-                        method: 'GET',
-                        headers:{
-                            'Content-Type': 'application/json'
-                        }
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        setHeroes(data.results);
-                        setLoading(false);
-                    }) 
-                }else{
-                    fetch(`https://superheroapi.com/api/2308834499252431/search/${search}`,{
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        setHeroes(data.results);
-                        setLoading(false);
-                        console.log(search)
-                    })
+        useEffect(() =>{
+            fetch(`https://superheroapi.com/api/2308834499252431/search/a`,{
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
                 }
-            }check();
-        })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    setHeroes(data.results);
+                    setLoading(false);
+                    console.log(search)
+                })
+        }, [])
+        
+
+        useEffect(() => {
+            if(!search){
+                fetch(`https://superheroapi.com/api/2308834499252431/search/a`,{
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    setHeroes(data.results);
+                    setLoading(false);
+                    console.log(search)
+                    setPesquisa(false);
+                })
+            }
+        },[search]);
 
         function searchHero(){
             if(!search){
@@ -56,13 +60,10 @@ export default function Home() {
                         setHeroes(data.results);
                         setLoading(false);
                         console.log(search)
+                        setPesquisa(true);
                     })
             }
         }
- 
-
-
-
 
     return (
         <View style={styles.container}>
@@ -82,13 +83,16 @@ export default function Home() {
             </View>
             
             {
-                search ? (
+                search && pesquisa ? (
                     <View style={styles.listHerois}>
-                    <Text style={styles.titleDiscover}>Results for: {search}</Text>
+                    
                         {
                             loading ? (
                                 <ActivityIndicator color="#000" size={50}/>
                             ) : (
+                            <View>
+                                
+                                <Text style={styles.titleDiscover}>Results for: {search}</Text>
                                 <FlatList
                                     style={styles.heroList}
                                     data={heroes}
@@ -97,6 +101,7 @@ export default function Home() {
                                     numColumns={2}
                                     showsVerticalScrollIndicator={false}
                                 />
+                            </View>
                             )
                         }
                     </View>
